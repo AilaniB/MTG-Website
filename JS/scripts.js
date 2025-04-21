@@ -1,5 +1,36 @@
 'use strict';
 
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+const offScreenMenu = document.querySelector('.unseen-menu');
+
+hamburgerMenu.addEventListener('click', () => {
+  hamburgerMenu.classList.toggle('active');
+  offScreenMenu.classList.toggle('active');
+});
+
+const root = document.documentElement;
+
+const accordionButtons = document.querySelectorAll(".accordion-button");
+
+accordionButtons.forEach(button => {
+  button.addEventListener('click', buttonClick);
+});
+
+function buttonClick(e){
+  const button = e.target;
+
+  button.classList.toggle("open");
+
+  const content = button.closest('section').querySelector('.accordion-content');
+
+  content.classList.toggle("open");
+
+  if(content.classList.contains("open")){
+    root.style.setProperty('--content-height', content.scrollHeight + 'px');
+  }
+}
+
 const leftButton = document.querySelector('.left');
 const rightButton = document.querySelector('.right');
 
@@ -47,7 +78,7 @@ function swipe(e){
 
 function navigation(e){
   if(e.target.classList.contains('active')){
-    return
+    return;
   }else{
     const currentNavigationItem = document.querySelector('.navigation-item.active');
 
