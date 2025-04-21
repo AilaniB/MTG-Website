@@ -8,13 +8,15 @@
   <title>UNC Charlotte Magic Club</title>
   <link rel="icon" type="image/x-icon" href="images/MTGLogo.png">
   <link rel="stylesheet" href="css/style.css">
+  <script src="JS/script.js" defer></script>
 </head>
 <body>
+
   <header>
 
-    <h1>UNC Charlotte Magic Club</h1>
+    <h1><a href="index.html">UNC Charlotte Magic Club</a></h1>
 
-    <nav>
+    <div class="unseen-menu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="meetings.html">Meetings</a></li>
@@ -22,7 +24,16 @@
         <li><a href="cubeRegistration.html">Cube</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+    </div>
+
+    <nav>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
+
   </header>
 
   <main class="meeting-main">
@@ -40,27 +51,39 @@
       <img src="images/scienceBuilding.png" alt ="The Science Building at UNC Charlotte." width="300" height="300">
     </div>
 
-    <div class="meetings">
-
-    <div class="tuesday-container-content">
-
-      <h3>Tuesday Meeting</h3>
-
-      <p>Tuesday Meetings are a great place for beginners, intermediate, and even expert level Magic players to meet up and play casually. The grand majority of members play Commander/EDH, but all formats all welcome and held by studetns. New players are welcome to join casual games on Tuesday and if you don't have a deck, club members can provide materials for ease of play.</p>
-
-      <img src="images/tuesdayMeeting.png" alt ="A Magic the Gathering commander game with three players." width="300" height="300">
+    <div class="meetings accordion">
       
-    </div>
+      <section class="tuesday-container-content">
 
-    <div class="thursday-container-content">
+        <h3 class="meeting-title">Tuesday Meeting<button class="accordion-button"></button></h3>
+        
+        <div class="accordion-content">
+          
+          <p>Tuesday Meetings are a great place for beginners, intermediate, and even expert level Magic players to meet up and play casually. The grand majority of members play Commander/EDH, but all formats all welcome and held by studetns. New players are welcome to join casual games on Tuesday and if you don't have a deck, club members can provide materials for ease of play.</p>
+          
+          <br> 
 
-      <h3>Thursday Meeting</h3>
+          <img src="images/tuesdayMeeting.png" alt ="A Magic the Gathering commander game with three players." width="300" height="300">
+        
+        </div>
+      
+      </section>
 
-      <p>Thursday Meetings is when the weekly Vintage Cube Night is held. Students are welcome to join the club's vintage cube draft. The max number of participants are 12, so we ask you RSVP on Discord or on the form under Cube on the site. It's a limited participant game format that is highly competitive. If no spaces are left, please reach out on the Discord server to an admin and they can further assist you.</p>
+      <section class="thursday-container-content">
 
-      <img src="images/thursdayMeeting.png" alt="A cube made of Magic the Gathering cards.">
+        <h3 class="meeting-title">Thursday Meeting<button class="accordion-button"></button></h3>
 
-    </div>
+        <div class="accordion-content">
+          
+          <p>Thursday Meetings is when the weekly Vintage Cube Night is held. Students are welcome to join the club's vintage cube draft. The max number of participants are 12, so we ask you RSVP on Discord or on the form under Cube on the site. It's a limited participant game format that is highly competitive. If no spaces are left, please reach out on the Discord server to an admin and they can further assist you.</p>
+
+          <br>
+          
+          <img src="images/thursdayMeeting.png" alt="A cube made of Magic the Gathering cards.">
+
+        </div>
+
+      </section>
 
     </div>
 
